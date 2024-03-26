@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        bpink: "#8f1353",
         vred:"#a33365",
         light:"#f5f5f5",
         dark: "#2b2b2b",

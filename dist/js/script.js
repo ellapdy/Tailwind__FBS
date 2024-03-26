@@ -10,6 +10,15 @@ starNav.forEach((star) => {
   });
 });
 
+var slider = tns({
+  container: 'slider',
+  items: 1,
+  controls: false,
+  autoplayButtonOutput: false,
+  slideBy: 'page',
+  autoplay: true
+});
+
 function removeActiveStar() {
   starNav.forEach((star) => {
     star.classList.remove("active");
