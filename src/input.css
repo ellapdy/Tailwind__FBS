@@ -35,7 +35,7 @@
     /* Header */
     .header__action{
         @apply bg-light bg-cover absolute top-[6.2rem] left-0 w-0 h-[90vh] px-0 pt-0 transition-all overflow-hidden
-        flex flex-col items-center lg:w-fit lg:hidden;
+        flex flex-col items-center z-50 lg:w-fit lg:hidden;
     }
     .header__action.open{
         @apply w-[100%] transition-all lg:hidden;
@@ -50,7 +50,7 @@
         @apply border-t border-b; 
     }
     .header__navm li:nth-child(2){
-        @apply border-b; 
+        @apply border-b-0; 
     }
     .header__navm li:nth-child(3){
         @apply border-b; 
@@ -74,15 +74,27 @@
         @apply hidden lg:flex lg:justify-around lg:gap-4 text-dvred text-[1.2rem] uppercase items-center;
     }
     .header__navd li a{
-        @apply hover:border-b-8 hover:border-dvred px-4 pb-8;
+        @apply hover:border-b-8 hover:border-dvred transition px-4 pb-8;
+    }
+    .services__hover li{
+        @apply hover:bg-bpink;
+       }
+    .header__navm .services__menu{
+        @apply hidden;
+    }
+    .services__hover:hover .services__menu{
+        @apply grid grid-cols-1 bg-dvred text-light;
+    }
+    .services__menu li{
+        @apply border-none;
     }
 
     /* Banner */
     .banner{
-        @apply bg-light pt-8 text-left text-dark px-2 justify-center lg:pt-20;
+        @apply bg-light text-dark pt-8 lg:pt-20 lg:pl-[24rem];
     }
     .banner__wrapper{
-        @apply flex flex-col lg:flex lg:flex-row lg:justify-center;
+        @apply flex flex-col lg:flex lg:flex-row;
     }
     .banner__left h2{
         @apply text-3xl pb-4 lg:max-w-[30rem];
@@ -156,8 +168,11 @@
     .slider{
         @apply bg-light pt-14;
     }
+    .sliderAll{
+        @apply relative;
+    }
     .sliders{
-        @apply grid grid-cols-1 lg:grid lg:grid-cols-2;
+        @apply grid grid-cols-1 lg:flex lg:flex-row lg:gap-28 lg:pl-[30rem];
     }
     .slider h2{
         @apply text-center text-dark text-3xl mb-16;
@@ -181,44 +196,31 @@
         @apply text-dark text-[1rem] font-semibold; 
     }
     .slider__right i{
-        @apply text-lgrey text-[8rem];
+        @apply text-lgrey text-[8rem] translate-y-[1rem];
     }
     .slider__right div{
-        @apply translate-x-[20rem] lg:translate-x-[30rem];
+        @apply translate-x-[20rem] translate-y-[-2rem] lg:translate-x-[23rem];
     }
     .slider__right p{
         @apply text-dark text-[1rem] text-center max-w-[20rem] mx-auto font-bold lg:max-w-[30rem];
     }
     a:nth-child(3) .slider__right p{
-        @apply text-[1.3rem] lg:max-w-[25rem];
+        @apply text-[1.3rem] lg:max-w-[25rem] lg:pl-20;
     }
     a:nth-child(4) .slider__right p{
         @apply text-[1.3rem];
     }
     a:nth-child(5) .slider__right p{
-        @apply text-[1.3rem] max-w-[20rem] lg:max-w-[30rem];
+        @apply text-[1.3rem] max-w-[20rem] lg:max-w-[30rem] lg:pl-14;
     }
     a:nth-child(6) .slider__right p{
         @apply text-[1.3rem];
     }
     a:nth-child(7) .slider__right p{
-        @apply text-[1.3rem] lg:max-w-[28rem];
+        @apply text-[1.3rem] lg:max-w-[28rem] lg:pl-12;
     }
     a:nth-child(8) .slider__right p{
-        @apply text-[1.3rem] lg:max-w-[26rem];
-    }
-
-    .tns-outer{
-        @apply relative;
-    }
-    .tns__nav{
-        @apply absolute bottom-[1rem] left-[80%] translate-[-50%] z-10;
-    }
-    .tns__nav button{
-        @apply mx-[0rem] my-[.5rem] w-[10px] h-[10px] border-r-[100%] border-none;
-    }
-    .tns-nav-active button{
-        @apply bg-dvred;
+        @apply text-[1.3rem] lg:max-w-[26rem] lg:pl-10;
     }
     /* EVENTS AND SERVICES */
     .events{
@@ -294,7 +296,7 @@
 
     /* ABOUT US BANNER */
     .aboutBanner{
-        @apply bg-light  text-dark pt-8;
+        @apply bg-light  text-dark pt-8 pl-4;
     }
     .aboutBanner__wrapper{
         @apply flex flex-col lg:flex lg:flex-row lg:justify-center;
@@ -306,7 +308,7 @@
         @apply font-normal;
     }
     .aboutBanner p{
-        @apply text-[1.1rem] pb-6 lg:max-w-[35rem]; 
+        @apply text-[1.1rem] pb-6 max-w-[25rem] lg:max-w-[35rem]; 
     }
     /* MISSION, VISION, VALUES */
     .aboutCompany{
@@ -349,7 +351,7 @@
         @apply w-[22rem] mx-auto lg:mx-0;
     }
     .values h3{
-        @apply text-center text-[1.5rem] font-bold py-4 lg:py-0 lg:text-left;
+        @apply text-center text-[1.5rem] font-bold py-4 lg:py-0 lg:text-left lg:mb-3;
     }
     .values ul{
         @apply text-center text-[1.1rem] lg:text-left;
@@ -407,29 +409,29 @@
         @apply font-bold text-[1.1rem];
     }
     .team__imaged:nth-child(1){
-        @apply z-40 translate-x-[13rem] translate-y-[-.4rem] hover:grayscale-0;
+        @apply z-30 translate-x-[13rem] translate-y-[-.4rem] hover:grayscale-0;
     }
     .team__imaged:nth-child(2){
-        @apply z-30 translate-x-[19rem] translate-y-[-1rem] hover:grayscale-0;
+        @apply z-20 translate-x-[19rem] translate-y-[-1rem] hover:grayscale-0;
     }
     .team__imaged:nth-child(3){
-        @apply z-40 translate-x-[30rem] translate-y-[.4rem] hover:grayscale-0;
+        @apply z-30 translate-x-[30rem] translate-y-[.4rem] hover:grayscale-0;
     }
     .team__imaged:nth-child(4){
-        @apply z-50 translate-x-[36rem] translate-y-[1.3rem] hover:grayscale-0;
+        @apply z-40 translate-x-[36rem] translate-y-[1.3rem] hover:grayscale-0;
     }
     .team__imaged:nth-child(5){
-        @apply z-40 translate-x-[45rem] translate-y-[-2rem] hover:grayscale-0;
+        @apply z-30 translate-x-[44.4rem] translate-y-[-2rem] hover:grayscale-0;
     }
     .team__imaged:nth-child(6){
-        @apply z-30 translate-x-[54rem] translate-y-[-1.6rem] hover:grayscale-0;
+        @apply z-20 translate-x-[55rem] translate-y-[-1.6rem] hover:grayscale-0;
     }
     .team__imaged:nth-child(7){
-        @apply z-40 translate-x-[61rem] translate-y-[-.1rem] hover:grayscale-0;
+        @apply z-30 translate-x-[62rem] translate-y-[-.1rem] hover:grayscale-0;
     }
     /* CTA */
     .cta{
-        @apply bg-bpink text-light pt-16;
+        @apply bg-bpink text-light pt-16 z-[999];
     }
     .cta h2{
         @apply text-center text-4xl mb-6;
@@ -457,6 +459,16 @@
         @apply grid grid-cols-1 lg:grid lg:grid-cols-3 lg:px-16;
     }
 
+}
+
+.tns-nav{
+    @apply absolute z-[999] translate-y-[35rem] translate-x-[12rem] lg:translate-y-[5rem] lg:translate-x-[50rem];
+}
+.tns-nav button{
+    @apply  my-[.5rem] w-[15px] h-[15px] translate-y-[30rem] border-r-[100%] border-none bg-dvred rounded-full mx-1;
+}
+button.tns-nav-active{
+    @apply bg-vred;
 }
 
 @layer utilities{

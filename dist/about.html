@@ -6,6 +6,9 @@
     <title>About-FBS</title>
     <link rel="stylesheet" href="../src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     
@@ -31,7 +34,15 @@
                     <ul class="header__navm">
                         <li><a href="">HOME</a></li>
                         <li><a href="">ABOUT</a></li>
-                        <li><a href="">SERVICES</a></li>
+                        <div class="services__hover">
+                            <li><a href="">SERVICES</a></li>
+                            <ul class="services__menu">
+                                <li><a href="">WEB SOLUTIONS</a></li>
+                                <li><a href="">VIRTUAL ASSISTANT SOLUTIONS</a></li>
+                                <li><a href="">ACCOUNTING SOLUTIONS</a></li>
+                                <li><a href="">LEARNING CENTER SOLUTIONS</a></li>
+                            </ul>
+                        </div>
                         <li><a href="">CAREERS</a></li>
                         <li><a href="">ACTIVITIES</a></li>
                         <li><a href="">CONTACT</a></li>
@@ -51,12 +62,12 @@
      <section class="aboutBanner">
         <div class="container">
             <div class="aboutBanner__wrapper">
-                <div class="aboutBanner__left">
+                <div class="aboutBanner__left" data-aos="fade-up" data-aos-duration="500">
                     <h2>About <span>Us</span></h2>
                     <p>As a social enterprise company, we are "in business for good." Our commitment is to leverage business success for the good of people and the communities in which we exist. Our vision and mission is successful business that maintains harmony between the three goals of excellent products and services, revenue generation, and positive social impacts.</p>
                     <a  class="btn bg--dvred">CONTACT US</a>
                 </div>
-                <div class="aboutBanner__right">
+                <div class="aboutBanner__right animate__animated animate__fadeInUp">
                     <img src="../dist/img/About/about-us-540.svg" alt="">
                 </div>
            </div>
@@ -69,13 +80,13 @@
             <div class="aboutCompany__wrapper">
                 <h2>"Partnering <span> with a</span> company <span>committed to</span> caring <span>about</span> people <span>and</span> community development". </h2>
                 <div class="aboutCompany__goals">
-                    <div class="vision">
+                    <div class="vision" data-aos="fade-right" data-aos-duration="500">
                         <img src="../dist/img/About/vision.svg" alt="">
                         <h3>Vision</h3>
                         <p>To be a globally competitive, premier provider of excellent business solutions, 
                             while sustaining a business model that will create positive social impact and make the Philippines an outstanding place to live and work.</p>
                     </div>
-                    <div class="mission">
+                    <div class="mission" data-aos="fade-up" data-aos-duration="500">
                         <img src="../dist/img/About/Mission.svg" alt="">
                         <h3>Mission</h3>
                         <p>FBS is a Godly, caring company, committed to holistically equipping its people, developing local talents,
@@ -84,7 +95,7 @@
                     <div class="values">
                         <img src="../dist/img/About/Values.svg" alt="">
                         <h3>Values</h3>
-                        <ul>
+                        <ul data-aos="fade-left">
                             <li>Godly Stewardship</li>
                             <li>Excellence</li>
                             <li>Professionalism</li>
@@ -186,7 +197,7 @@
         <div class="container">
             <div class="partners__wrapper">
                 <h2>Some of our <span> Clients and Partners</span></h2>
-                <div class="partners__imgs">
+                <div class="partners__imgs animate__animated animate__fadeIn animate__delay-2s">
                     <!-- Taza Mia -->
                     <div class="partners__img">
                         <img src="../dist/img/About/logo-tazamia.png" alt="">
@@ -325,5 +336,13 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script>
+        AOS.init();
+
+        new WOW().init();
+    </script>
 </body>
 </html>

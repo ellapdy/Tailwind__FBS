@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     
@@ -32,7 +35,15 @@
                     <ul class="header__navm">
                         <li><a href="">HOME</a></li>
                         <li><a href="">ABOUT</a></li>
-                        <li><a href="">SERVICES</a></li>
+                        <div class="services__hover">
+                            <li><a href="">SERVICES</a></li>
+                            <ul class="services__menu">
+                                <li><a href="">WEB SOLUTIONS</a></li>
+                                <li><a href="">VIRTUAL ASSISTANT SOLUTIONS</a></li>
+                                <li><a href="">ACCOUNTING SOLUTIONS</a></li>
+                                <li><a href="">LEARNING CENTER SOLUTIONS</a></li>
+                            </ul>
+                        </div>
                         <li><a href="">CAREERS</a></li>
                         <li><a href="">ACTIVITIES</a></li>
                         <li><a href="">CONTACT</a></li>
@@ -52,12 +63,12 @@
     <section class="banner">
         <div class="container">
             <div class="banner__wrapper">
-                <div class="banner__left">
+                <div class="banner__left" data-aos="fade-up" data-aos-duration="500">
                     <h2>Excellence in <span>Managed Services</span> and <span>Web Solutions</span></h2>
                     <p>Along with our website design & development solutions (Including website hosting, graphic design, and basic SEO services), FBS meets the needs of clients through recruiting and managing professionals who serve in a wide array of areas like bookkeeping and accounting, virtual assistant and data entry personnel. If you want excellent customer service and a dedicated professional working at a competitive price, we can meet your needs.</p>
                     <a  class="btn bg--dvred">OUR SERVICES</a>
                 </div>
-                <div class="banner__right">
+                <div class="banner__right animate__animated animate__fadeInUp">
                     <img src="../dist/img/fbs-banner-bg.png" alt="">
                 </div>
            </div>
@@ -145,11 +156,11 @@
 
     <!-- SLIDER -->
     <section class="slider">
-        <div class="container">
-            <h2>Hear what our <span>clients say.</span></h2>
+        <div class="sliderAll">
             <!-- slider 1 -->
             <a href="">
             <picture>
+                <h2>Hear what our <span>clients say.</span></h2>
                 <div class="sliders">
                 <div class="slider__left">
                     <img src="../dist/img/slider-1.jpg" alt="">
@@ -177,6 +188,7 @@
             <!-- slider 2 -->
             <a href="">
             <picture>
+                <h2>Hear what our <span>clients say.</span></h2>
                 <div class="sliders">
                 <div class="slider__left">
                     <img src="../dist/img/slider-2.jpg" alt="">
@@ -202,6 +214,7 @@
             <!-- slider 3 -->
             <a href="">
             <picture>
+                <h2>Hear what our <span>clients say.</span></h2>
                 <div class="sliders">
                 <div class="slider__left">
                     <img src="../dist/img/slider-3.png" alt="">
@@ -226,6 +239,7 @@
             <!-- slider 4 -->
             <a href="">
             <picture>
+                <h2>Hear what our <span>clients say.</span></h2>
                 <div class="sliders">
                 <div class="slider__left">
                     <img src="../dist/img/slider-4.png" alt="">
@@ -249,6 +263,7 @@
             <!-- slider 5 -->
             <a href="">
             <picture>
+                <h2>Hear what our <span>clients say.</span></h2>
                 <div class="sliders">
                 <div class="slider__left">
                     <img src="../dist/img/slider-5.png" alt="">
@@ -273,6 +288,7 @@
             <!-- slider 6 -->
             <a href="">
             <picture>
+                <h2>Hear what our <span>clients say.</span></h2>
                 <div class="sliders">
                 <div class="slider__left">
                     <img src="../dist/img/slider-6.png" alt="">
@@ -297,6 +313,7 @@
             <!-- slider 7 -->
             <a href="">
             <picture>
+                <h2>Hear what our <span>clients say.</span></h2>
                 <div class="sliders">
                 <div class="slider__left">
                     <img src="../dist/img/slider-7.png" alt="">
@@ -327,7 +344,7 @@
             <div class="events__wrapper">
                 <div class="events__cards">
                     <!-- card 1 -->
-                    <div class="event__card">
+                    <div class="event__card" data-aos="fade-up" data-aos-duration="500">
                         <img src="../dist/img/card-1.jpg" alt="">
                         <h3>FBS 5th Anniversary</h3>
                         <p>Our 5th-year celebration at Frontline Business Solutions is a special time to look back on…</p>
@@ -336,7 +353,7 @@
                         </div>
                     </div>
                     <!-- card 2 -->
-                    <div class="event__card">
+                    <div class="event__card" data-aos="fade-up" data-aos-duration="500">
                         <img src="../dist/img/card-2.jpg" alt="">
                         <h3>Company Retreat 2023</h3>
                         <p>Our company retreat at the Rizal Recreational Center in Rizal, Laguna, held from October 20…</p>
@@ -345,7 +362,7 @@
                         </div>
                     </div>
                     <!-- card 3 -->
-                    <div class="event__card">
+                    <div class="event__card" data-aos="fade-up" data-aos-duration="500">
                         <img src="../dist/img/card-3.jpg" alt="">
                         <h3>HTML & CSS3 ONLINE CRASH COURSE FOR BEGINNERS</h3>
                         <p>Are you eager to start your web development journey from scratch? Join us for our…</p>
@@ -415,5 +432,23 @@
 
     <script src="./js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+        var slider = tns({
+        container: '.sliderAll',
+        items: 1,
+        nav:true,
+        controls: false,
+        autoplayButtonOutput: false,
+        slideBy: 'page',
+        autoplay: false,
+        mouseDrag: true
+     });
+      </script>
+
+
 </body>
 </html>
